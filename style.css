@@ -1,0 +1,187 @@
+:root{
+    --background-color: hsl(0, 100%, 74%);
+    --submit-btn: hsl(154, 59%, 51%);
+    --promo-div: hsl(248, 32%, 49%);
+    --input-focus-color: hsl(249, 10%, 26%);
+    --input-color: hsl(246, 25%, 77%);
+
+    --main-font: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+main{
+    background-image: url('./images/bg-intro-desktop.png');
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px min(11.5%, 165px);
+
+}
+
+.left-section{
+    max-width: 50%;
+    color: white;
+    margin-right: 45px;
+}
+
+.left-section > p{
+    font-size: 1rem;
+}
+
+.right-section{
+    text-align: center;
+    min-width: 50%;
+    padding-left: 15px;
+}
+
+form{
+    display: grid;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    gap: 20px;
+    max-width: 540px;
+    box-shadow: 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1{
+    font-size: 3rem;
+    line-height: 55px;
+    margin-bottom: 25px;
+}
+
+.promo-div{
+    background-color: var(--promo-div);
+    color: white;
+    padding: 18px 0px;
+    border-radius: 10px;
+    margin-bottom: 23px;
+    font-weight: 400;
+    max-width: 540px;
+    box-shadow: 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.promo-div > span{
+    font-weight: 600;
+}
+
+form > button{
+    background-color: var(--submit-btn);
+    border-style: none;
+    color: white;
+    padding: 18px 0px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+form > button:hover{
+    opacity: 0.7;
+}
+
+form > p{
+    color: var(--input-color);
+    font-size: .6rem;
+    
+}
+
+form > p a{
+    text-decoration: none;
+    color: var(--background-color);
+    font-weight: 700;
+}
+
+input{
+    padding: 17px 30px;
+    border-radius: 5px;
+    border-color: var(--input-color);
+    border-style: solid;
+    border-width: 1px;
+    font-weight: 600;
+    color: var(--input-focus-color);
+    width: 100%;
+}
+
+input::placeholder{
+    color: var(--input-color);
+    font-weight: 600;
+}
+
+input:focus{
+    outline-color: var(--input-focus-color);
+    outline-width: 1px;
+    outline-style: solid;
+}
+
+.error-message{
+    color: var(--background-color);
+    font-size: .7rem;
+    text-align: right;
+    font-style: italic;
+    font-weight: 500;
+    margin-top: 5px;
+    display: none;
+}
+
+.input-div{
+    position: relative;
+}
+
+.input-div > img{
+    position: absolute;
+    top: 25%;
+    right: 25px;
+    display: none;
+}
+
+@media screen and (max-width: 750px) {
+    main{
+        flex-direction: column;
+        padding: 90px 25px;
+        text-align: center;
+    }
+
+    .right-section{
+        padding-left: 0px;
+    }
+
+    .left-section{
+        margin-right: 0px;
+        min-width: 100%;
+        margin-bottom: 60px;
+    }
+
+    h1{
+        font-size: 1.75rem;
+        line-height: 40px;
+    }
+
+    form{
+        padding: 25px;
+    }
+
+    .promo-div{
+        padding: 18px 50px;
+    }
+
+    form > p{
+        font-size: .7rem;
+    }
+}
+
+
+
+
